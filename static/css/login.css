@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    display: flex;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Left */
+  .left, .right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .left {
+    background-color: #fff;
+    padding: 40px;
+  }
+  
+  .form-container {
+    width: 100%;
+    max-width: 400px;
+    text-align: center; 
+  }
+  
+  .form-container h1 {
+    margin-bottom: 10px;
+    font-size: 28px;
+    color: #333;
+  }
+  
+  .form-container p {
+    margin-bottom: 30px;
+    color: #555;
+    font-size: 16px;
+  }
+  
+  /* Input */
+  .form-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  /* Button */
+  .form-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #f05d50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .form-container button:hover {
+    background-color: #e04840;
+  }
+  
+  /* Google Button */
+  .form-container .google-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #ddd;
+    cursor: pointer;
+  }
+  
+  .form-container .google-btn img {
+    width: 20px;
+    margin-right: 10px;
+  }
+  
+  /* Right Side */
+  .right {
+    background: url('background.jpg') no-repeat center center;
+    background-size: cover;
+  }
+  
