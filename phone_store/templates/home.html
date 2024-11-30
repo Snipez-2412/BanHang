@@ -1,0 +1,635 @@
+<!-- phone_store/templates/home.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Điện Thoại Nổi Bật Nhất</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <style>
+        body {
+                 font-family: Arial, sans-serif;
+                 margin: 0;
+                 padding: 0;
+                 background-color: #f5f5f5;
+             }
+             .container {
+                 width: 100%;
+                 max-width: 1200px;
+                 margin: 0 auto;
+                 padding: 20px;
+             }
+             .header {
+                 font-size: 24px;
+                 font-weight: bold;
+                 margin-bottom: 20px;
+             }
+             .filter-buttons {
+                 display: flex;
+                 gap: 10px;
+                 margin-bottom: 20px;
+             }
+             .filter-buttons button {
+                 padding: 10px 20px;
+                 border: none;
+                 background-color: #f0f0f0;
+                 cursor: pointer;
+                 border-radius: 5px;
+             }
+             .filter-buttons button:hover {
+                 background-color: #e0e0e0;
+             }
+             .product-grid {
+                 display: flex;
+                 flex-wrap: wrap;
+                 gap: 20px;
+             }
+             .product-card {
+                 background-color: #fff;
+                 border: 1px solid #ddd;
+                 border-radius: 10px;
+                 width: calc(25% - 20px);
+                 box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                 overflow: hidden;
+                 position: relative;
+             }
+             .product-card img {
+                 width: 100%;
+                 height: auto;
+             }
+             .product-card .discount {
+                 position: absolute;
+                 top: 10px;
+                 left: 10px;
+                 background-color: #ff4d4d;
+                 color: #fff;
+                 padding: 5px 10px;
+                 border-radius: 5px;
+                 font-size: 14px;
+             }
+             .product-card .sale {
+                 position: absolute;
+                 top: 10px;
+                 right: 10px;
+                 background-color: #000;
+                 color: #fff;
+                 padding: 5px 10px;
+                 border-radius: 5px;
+                 font-size: 14px;
+             }
+             .product-card .content {
+                 padding: 15px;
+             }
+             .product-card .title {
+                 font-size: 16px;
+                 font-weight: bold;
+                 margin-bottom: 10px;
+             }
+             .product-card .price {
+                 font-size: 18px;
+                 color: #ff4d4d;
+                 font-weight: bold;
+                 margin-bottom: 5px;
+             }
+             .product-card .old-price {
+                 font-size: 14px;
+                 color: #999;
+                 text-decoration: line-through;
+                 margin-bottom: 10px;
+             }
+             .product-card .member-discount,
+             .product-card .student-discount {
+                 font-size: 14px;
+                 color: #333;
+                 margin-bottom: 5px;
+             }
+             .product-card .installment-info {
+                 font-size: 14px;
+                 color: #666;
+                 margin-bottom: 10px;
+             }
+             .product-card .rating {
+                 color: #ffcc00;
+                 margin-bottom: 10px;
+             }
+             .product-card .wishlist {
+                 display: flex;
+                 justify-content: space-between;
+                 align-items: center;
+             }
+             .product-card .wishlist span {
+                 font-size: 14px;
+                 color: #333;
+             }
+             .product-card .wishlist i {
+                 color: #ff4d4d;
+                 cursor: pointer;
+             }
+       </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        ĐIỆN THOẠI NỔI BẬT NHẤT
+    </div>
+    <div class="filter-buttons">
+     <button>
+      Apple
+     </button>
+     <button>
+      Samsung
+     </button>
+     <button>
+      Xiaomi
+     </button>
+     <button>
+      OPPO
+     </button>
+     <button>
+      vivo
+     </button>
+     <button>
+      realme
+     </button>
+     <button>
+      ASUS
+     </button>
+     <button>
+      TECNO
+     </button>
+     <button>
+      Nokia
+     </button>
+     <button>
+      Infinix
+     </button>
+     <button>
+      Oneplus
+     </button>
+     <button>
+      Xem tất cả
+     </button>
+    </div>
+    <div class="product-grid">
+     <div class="product-card">
+      <div class="discount">
+       Giảm 3%
+      </div>
+      <div class="sale">
+       SALE BONG TAY
+      </div>
+      <img alt="iPhone 16 Pro Max 256GB I Chính hãng VN/A" height="200" src="https://storage.googleapis.com/a1aa/image/4tAG0G3U284JChcAEZMw5OoeIW91ve9rxtsaGt1lG4dWyW1TA.jpg" width="200"/>
+      <div class="content">
+       <div class="title">
+        iPhone 16 Pro Max 256GB I Chính hãng VN/A
+       </div>
+       <div class="price">
+        33.790.000đ
+       </div>
+       <div class="old-price">
+        34.990.000đ
+       </div>
+       <div class="member-discount">
+        Smember giảm thêm đến 338.000đ
+       </div>
+       <div class="installment-info">
+        Không phí chuyển đổi khi trả góp 0% qua thẻ tín dụng kỳ hạn 3-6...
+       </div>
+       <div class="rating">
+        <i class="fas fa-star">
+        </i>
+        <i class="fas fa-star">
+        </i>
+        <i class="fas fa-star">
+        </i>
+        <i class="fas fa-star">
+        </i>
+        <i class="fas fa-star">
+        </i>
+       </div>
+       <div class="wishlist">
+        <span>
+         Yêu thích
+        </span>
+        <i class="far fa-heart">
+        </i>
+       </div>
+      </div>
+     </div>
+     <div class="product-card">
+      <div class="discount">
+       Giảm 5%
+      </div>
+      <div class="sale">
+       Trả góp 0%
+      </div>
+      <img alt="Samsung Galaxy Z Fold6 12GB 256GB" height="200" src="https://storage.googleapis.com/a1aa/image/xQ0SJCSReaUpfU3maxlIPrgac4nyQ9OS7dC8FUgysRlgyW1TA.jpg" width="200"/>
+      <div class="content">
+       <div class="title">
+        Samsung Galaxy Z Fold6 12GB 256GB
+       </div>
+       <div class="price">
+        41.990.000đ
+       </div>
+       <div class="old-price">
+        43.990.000đ
+       </div>
+       <div class="member-discount">
+        Smember giảm thêm đến 408.000đ
+       </div>
+       <div class="student-discount">
+        S-Student giảm thêm đến 600.000đ
+       </div>
+       <div class="installment-info">
+        Không phí chuyển đổi khi trả góp 0% qua thẻ tín dụng kỳ hạn 3-6...
+       </div>
+       <div class="rating">
+        <i class="fas fa-star">
+        </i>
+        <i class="fas fa-star">
+        </i>
+        <i class="fas fa-star">
+        </i>
+        <i class="fas fa-star">
+        </i>
+        <i class="fas fa-star">
+        </i>
+       </div>
+       <div class="wishlist">
+        <span>
+         Yêu thích
+        </span>
+        <i class="far fa-heart">
+        </i>
+       </div>
+      </div>
+     </div>
+     <div class="product-card">
+      <div class="discount">
+       Giảm 12%
+      </div>
+      <div class="sale">
+       SALE BONG TAY
+      </div>
+      <img alt="Samsung Galaxy S24 Ultra 12GB 256GB" height="200" src="https://storage.googleapis.com/a1aa/image/4pjsre73cSSMZyH2LsBlDSfo2etyrJs1jZIDyTeQklWyJbVPB.jpg" width="200"/>
+      <div class="content">
+       <div class="title">
+        Samsung Galaxy S24 Ultra 12GB 256GB
+       </div>
+       <div class="price">
+        29.990.000đ
+       </div>
+       <div class="old-price">
+        33.990.000đ
+       </div>
+       <div class="member-discount">
+        Smember giảm thêm đến 300.000đ
+       </div>
+       <div class="student-discount">
+        S-Student giảm thêm đến 600.000đ
+       </div>
+       <div class="installment-info">
+        Không phí chuyển đổi khi trả góp 0% qua thẻ tín dụng kỳ hạn 3-6...
+       </div>
+       <div class="rating">
+        <i class="fas fa-star">
+        </i>
+        <i class="fas fa-star">
+        </i>
+        <i class="fas fa-star">
+        </i>
+        <i class="fas fa-star">
+        </i>
+        <i class="fas fa-star">
+        </i>
+       </div>
+       <div class="wishlist">
+        <span>
+         Yêu thích
+        </span>
+        <i class="far fa-heart">
+        </i>
+       </div>
+      </div>
+     </div>
+     <div class="product-card">
+      <div class="discount">
+       Giảm 11%
+      </div>
+      <div class="sale">
+       SALE BONG TAY
+      </div>
+      <img alt="Samsung Galaxy M55 (12GB 256GB)" height="200" src="https://storage.googleapis.com/a1aa/image/fAXqEsNGeQpBsEg7NJmbBTXJucMIeVeSz1mUuX1JqAImJbVPB.jpg" width="200"/>
+      <div class="content">
+       <div class="title">
+        Samsung Galaxy M55 (12GB 256GB)
+       </div>
+       <div class="price">
+        9.990.000đ
+       </div>
+       <div class="old-price">
+        11.190.000đ
+       </div>
+       <div class="member-discount">
+        Smember giảm thêm đến 100.000đ
+       </div>
+       <div class="student-discount">
+        S-Student giảm thêm đến 599.000đ
+       </div>
+       <div class="installment-info">
+        Không phí chuyển đổi khi trả góp 0% qua thẻ tín dụng kỳ hạn 3-6...
+       </div>
+       <div class="rating">
+        <i class="fas fa-star">
+        </i>
+        <i class="fas fa-star">
+        </i>
+        <i class="fas fa-star">
+        </i>
+        <i class="fas fa-star">
+        </i>
+        <i class="fas fa-star">
+        </i>
+       </div>
+       <div class="wishlist">
+        <span>
+         Yêu thích
+        </span>
+        <i class="far fa-heart">
+        </i>
+       </div>
+      </div>
+     </div>
+     <div class="product-card">
+      <div class="discount">
+       Giảm 13%
+      </div>
+      <div class="sale">
+       SALE BONG TAY
+      </div>
+      <img alt="TECNO CAMON 30S 8GB 256GB" height="200" src="https://storage.googleapis.com/a1aa/image/GbX9KWMCPkIWE1bG4pPHImkN186JqyLierZkfixode92ktqnA.jpg" width="200"/>
+      <div class="content">
+       <div class="title">
+        TECNO CAMON 30S 8GB 256GB
+       </div>
+       <div class="price">
+        4.790.000đ
+       </div>
+       <div class="old-price">
+        5.490.000đ
+       </div>
+       <div class="member-discount">
+        Smember giảm thêm đến 48.000đ
+       </div>
+       <div class="installment-info">
+        Không phí chuyển đổi khi trả góp 0% qua thẻ tín dụng kỳ hạn 3-6...
+       </div>
+       <div class="rating">
+        <i class="fas fa-star">
+        </i>
+        <i class="fas fa-star">
+        </i>
+        <i class="fas fa-star">
+        </i>
+        <i class="fas fa-star">
+        </i>
+        <i class="fas fa-star">
+        </i>
+       </div>
+       <div class="wishlist">
+        <span>
+         Yêu thích
+        </span>
+        <i class="far fa-heart">
+        </i>
+       </div>
+      </div>
+     </div>
+     <div class="product-card">
+      <div class="discount">
+       Giảm 23%
+      </div>
+      <div class="sale">
+       SALE BONG TAY
+      </div>
+      <img alt="iPhone 13 128GB I Chính hãng VN/A" height="200" src="https://storage.googleapis.com/a1aa/image/3yPSybcUDLIDCdHLoiXinOsQAQ3QVzq5dffoUvzuHeF1ktqnA.jpg" width="200"/>
+      <div class="content">
+       <div class="title">
+        iPhone 13 128GB I Chính hãng VN/A
+       </div>
+       <div class="price">
+        13.390.000đ
+       </div>
+       <div class="old-price">
+        17.290.000đ
+       </div>
+       <div class="member-discount">
+        Smember giảm thêm đến 134.000đ
+       </div>
+       <div class="installment-info">
+        Không phí chuyển đổi khi trả góp 0% qua thẻ tín dụng kỳ hạn 3-6...
+       </div>
+       <div class="rating">
+        <i class="fas fa-star">
+        </i>
+        <i class="fas fa-star">
+        </i>
+        <i class="fas fa-star">
+        </i>
+        <i class="fas fa-star">
+        </i>
+        <i class="fas fa-star">
+        </i>
+       </div>
+       <div class="wishlist">
+        <span>
+         Yêu thích
+        </span>
+        <i class="far fa-heart">
+        </i>
+       </div>
+      </div>
+     </div>
+     <div class="product-card">
+      <div class="discount">
+       Giảm 2%
+      </div>
+      <div class="sale">
+       SALE BONG TAY
+      </div>
+      <img alt="iPhone 16 Pro 128GB I Chính hãng VN/A" height="200" src="https://storage.googleapis.com/a1aa/image/p1rcoYL4425SB5YWpeboAq4ydvy0WvEg255G6KSyiGRPZr6JA.jpg" width="200"/>
+      <div class="content">
+       <div class="title">
+        iPhone 16 Pro 128GB I Chính hãng VN/A
+       </div>
+       <div class="price">
+        28.490.000đ
+       </div>
+       <div class="old-price">
+        28.990.000đ
+       </div>
+       <div class="member-discount">
+        Smember giảm thêm đến 285.000đ
+       </div>
+       <div class="installment-info">
+        Không phí chuyển đổi khi trả góp 0% qua thẻ tín dụng kỳ hạn 3-6...
+       </div>
+       <div class="rating">
+        <i class="fas fa-star">
+        </i>
+        <i class="fas fa-star">
+        </i>
+        <i class="fas fa-star">
+        </i>
+        <i class="fas fa-star">
+        </i>
+        <i class="fas fa-star">
+        </i>
+       </div>
+       <div class="wishlist">
+        <span>
+         Yêu thích
+        </span>
+        <i class="far fa-heart">
+        </i>
+       </div>
+      </div>
+     </div>
+     <div class="product-card">
+      <div class="discount">
+       Giảm 16%
+      </div>
+      <div class="sale">
+       SALE BONG TAY
+      </div>
+      <img alt="Xiaomi Redmi Note 13 Pro Plus 5G 8GB 256GB" height="200" src="https://storage.googleapis.com/a1aa/image/umApCfwKDU1pZC2bqykeYyHWMsXeyjnpDP0jX5YYoQdqktqnA.jpg" width="200"/>
+      <div class="content">
+       <div class="title">
+        Xiaomi Redmi Note 13 Pro Plus 5G 8GB 256GB
+       </div>
+       <div class="price">
+        9.190.000đ
+       </div>
+       <div class="old-price">
+        10.990.000đ
+       </div>
+       <div class="member-discount">
+        Smember giảm thêm đến 92.000đ
+       </div>
+       <div class="installment-info">
+        Không phí chuyển đổi khi trả góp 0% qua thẻ tín dụng kỳ hạn 3-6...
+       </div>
+       <div class="rating">
+        <i class="fas fa-star">
+        </i>
+        <i class="fas fa-star">
+        </i>
+        <i class="fas fa-star">
+        </i>
+        <i class="fas fa-star">
+        </i>
+        <i class="fas fa-star">
+        </i>
+       </div>
+       <div class="wishlist">
+        <span>
+         Yêu thích
+        </span>
+        <i class="far fa-heart">
+        </i>
+       </div>
+      </div>
+     </div>
+     <div class="product-card">
+      <div class="discount">
+       Giảm 34%
+      </div>
+      <div class="sale">
+       SALE BONG TAY
+      </div>
+      <img alt="Samsung Galaxy S23 Ultra 12GB 512GB" height="200" src="https://storage.googleapis.com/a1aa/image/c64kvHwPjsKPGh5TJNij4thmWVJLu5C1ifhYtR1cMWdMZr6JA.jpg" width="200"/>
+      <div class="content">
+       <div class="title">
+        Samsung Galaxy S23 Ultra 12GB 512GB
+       </div>
+       <div class="price">
+        24.590.000đ
+       </div>
+       <div class="old-price">
+        36.990.000đ
+       </div>
+       <div class="member-discount">
+        Smember giảm thêm đến 246.000đ
+       </div>
+       <div class="installment-info">
+        Không phí chuyển đổi khi trả góp 0% qua thẻ tín dụng kỳ hạn 3-6...
+       </div>
+       <div class="rating">
+        <i class="fas fa-star">
+        </i>
+        <i class="fas fa-star">
+        </i>
+        <i class="fas fa-star">
+        </i>
+        <i class="fas fa-star">
+        </i>
+        <i class="fas fa-star">
+        </i>
+       </div>
+       <div class="wishlist">
+        <span>
+         Yêu thích
+        </span>
+        <i class="far fa-heart">
+        </i>
+       </div>
+      </div>
+     </div>
+     <div class="product-card">
+      <div class="discount">
+       Giảm 15%
+      </div>
+      <div class="sale">
+       SALE BONG TAY
+      </div>
+      <img alt="Xiaomi POCO X6 Pro 5G 8GB 256GB - Chỉ có tại Cellphones" height="200" src="https://storage.googleapis.com/a1aa/image/U1jtigkfix1dPqQhZBD4qRgQgvPXV1ZHDQhGirIWLeVfktqnA.jpg" width="200"/>
+      <div class="content">
+       <div class="title">
+        Xiaomi POCO X6 Pro 5G 8GB 256GB - Chỉ có tại Cellphones
+       </div>
+       <div class="price">
+        8.490.000đ
+       </div>
+       <div class="old-price">
+        9.990.000đ
+       </div>
+       <div class="member-discount">
+        Smember giảm thêm đến 84.000đ
+       </div>
+       <div class="installment-info">
+        Không phí chuyển đổi khi trả góp 0% qua thẻ tín dụng kỳ hạn 3-6...
+       </div>
+       <div class="rating">
+        <i class="fas fa-star">
+        </i>
+        <i class="fas fa-star">
+        </i>
+        <i class="fas fa-star">
+        </i>
+        <i class="fas fa-star">
+        </i>
+        <i class="fas fa-star">
+        </i>
+       </div>
+       <div class="wishlist">
+        <span>
+         Yêu thích
+        </span>
+        <i class="far fa-heart">
+        </i>
+       </div>
+      </div>
+     </div>
+    </div>
+  </body>
+</html>
