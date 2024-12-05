@@ -3,21 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sign Up</title>
-  <link rel="stylesheet" href="login.css">
+  <title>Login</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
 </head>
 <body>
   <div class="left">
     <div class="form-container">
-      <h1>SIGN UP</h1>
+      <h1>LOGIN</h1>
       <p>Join us today!</p>
-      <form action="#" method="POST">
-        <input type="email" name="email" placeholder="Enter your email" required>
-        <input type="password" name="password" placeholder="********" required>
-        <button type="submit">Sign Up</button>
+      <form action="{{ url_for('login') }}" method="POST">
+        <input type="text" name="username" placeholder="Enter your username" required>
+        <input type="password" name="password" placeholder="Enter your password" required>
+        <button type="submit">Log In</button>
       </form>
+      <p>Don't have an account? <a href="{{ url_for('signup') }}">Sign up here</a>.</p>
       <button class="google-btn">
-        <img src="Logo-google-icon-PNG.png">
+        <img src="{{ url_for('static', filename='images/Logo-google-icon-PNG.png') }}" alt="Google Icon">
         Sign in with Google
       </button>
     </div>
