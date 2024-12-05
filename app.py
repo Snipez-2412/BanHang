@@ -1,12 +1,13 @@
 from flask import Flask, render_template, request, redirect, url_for, flash, session
+from pymongo import MongoClient
+
 
 app = Flask(__name__)
+uri = "mongodb+srv://tnchau23823:abc13579@cluster0.fs6jd.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+client = MongoClient(uri)
 app.secret_key = 'key'  # Required for session management
-
-# Mock user database
-users = {
-    "huy": "huy1234"  # username: password
-}
+db = client['my_database']
+accounts = db['account']
 
 @app.route('/')
 def home():
@@ -21,7 +22,8 @@ def login():
         password = request.form.get('password')
 
         # Authenticate user
-        if username in users and users[username] == password:
+        user = accounts.find_one({'username': username, 'password': password})
+        if user:
             session['user'] = username  # Store the username in session
             flash('Login successful!', 'success')
             return redirect(url_for('home'))  # Redirect to the home page
@@ -30,9 +32,21 @@ def login():
 
     return render_template("Login.html")
 
-@app.route('/signup')
+@app.route('/signup', methods = ['GET','POST'])
 def signup():
-    return render_template("SignUp.html")
+    if request.method == 'POST':
+        username = request.form['username']
+        email = request.form['email']
+        password = request.form['password']
+        # Thêm người dùng mới vào MongoDB
+        if accounts.find_one({'username': username}):
+            return render_template('SignUp.html', message='Tài khoản đã tồn tại')
+        else:
+            new_user = {'username': username,'email':email, 'password': password}
+            accounts.insert_one(new_user)
+            return render_template('SignUp.html', message='Đăng ký thành công!')
+    return render_template('SignUp.html')
+    
 
 @app.route('/logout')
 def logout():
