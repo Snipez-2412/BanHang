@@ -84,9 +84,9 @@
     margin-right: 10px;
   }
   
-  /* Right Side */
-  .right {
-    background: url('background.jpg') no-repeat center center;
-    background-size: cover;
-  }
+    .right {
+        background: url('../images/background.jpg') no-repeat center center;
+        background-size: cover;
+    }
+
   
